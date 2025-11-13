@@ -1,0 +1,32 @@
+---
+description: This rule explains React Native component patterns and mobile-specific considerations.
+globs: **/*.jsx,**/*.tsx,**/*.ts
+alwaysApply: false
+---
+
+# React Native rules
+
+- Use TypeScript for all files (.ts/.tsx extensions)
+- Follow React Native ESLint config (@react-native)
+- Prettier: single quotes, trailing commas, avoid arrow parens
+- Import order: React first, then third-party, then local modules
+- Use functional components with hooks
+- StyleSheet.create for component styles
+- SafeAreaProvider for safe area handling
+- Use StatusBar with appropriate barStyle based on color scheme
+- Follow a consistent folder structure within src directory (components, screens, navigation, services, hooks, utils, styles)
+- Use React Navigation for screen navigation
+- Use FlatList or SectionList for rendering lists instead of map + ScrollView
+- Use custom hooks for reusable logic
+- Implement proper error boundaries and loading states
+- Optimize images and assets for mobile performance
+- Use zustand for state management
+- Put types and interfaces in src/types directory rather than in the code files
+- Use constant values (create if needed) instead of literals for styling
+- Separate core logic (zustand) and view logic
+- Service response should go to zustand store
+- FlatLists that show content retrieved from an api must have pull down to refresh
+- Implement retry with backoff
+- Handle network/API errors and log them via a mocked log(error, context) function
+- Use memoization when relevant
+- Define an explicit cache policy
